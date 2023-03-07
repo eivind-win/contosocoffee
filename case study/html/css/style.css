@@ -1,0 +1,41 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+h1
+{
+  text-align: right;
+  padding-top:29;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+h2
+{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h4
+{
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.col-md-12
+{
+  padding-top:10;
+  border-radius:30;
+}
+p
+{
+  text-align: justify;
+  padding: 10;
+  font-family: cursive;
+}
+.coffeeimage
+{
+  height: 50%;
+}
+.logo
+{
+  height:20%;
+}
