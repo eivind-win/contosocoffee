@@ -88,6 +88,28 @@ resource "azurerm_traffic_manager_profile" "example" {
   monitor_interval  = 30
   monitor_timeout   = 10
 
-  # DNS settings
+# DNS settings
   dns_config {
-    relative_name = "contosoc
+    relative_name = "contosocoffee" # DNS name for the Traffic Manager profile
+    ttl           = 60 # Time-to-live for DNS records
+    fqdn          = "contosocoffee.trafficmanager.net" # Fully qualified domain name for the profile
+    # Geographic routing settings for the two container groups
+    geographic_routing {
+      # Endpoint for London container group
+      endpoint {
+        name       = "London"
+        type       = "azureEndpoints"
+        endpoint_location = "uksouth" # Azure region for London
+        target_resource_id = azurerm_container_group.london.id # ID of the London container group
+      }
+
+      # Endpoint for New York container group
+      endpoint {
+        name       = "NewYork"
+        type       = "azureEndpoints"
+        endpoint_location = "eastus" # Azure region for New York
+        target_resource_id = azurerm_container_group.newyork.id # ID of the New York container group
+      }
+    }
+  }
+}
