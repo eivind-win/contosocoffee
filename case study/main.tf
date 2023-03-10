@@ -52,24 +52,26 @@ resource "azurerm_container_group" "example-london" {
   resource_group_name = azurerm_resource_group.contosocoffee.name
   ip_address_type     = "Public"
   dns_name_label      = "example-dns-london"
-  os_type = "Linux"
-    image_registry_credential {
-   user_assigned_identity_id = azurerm_user_assigned_identity.example.id
-   server = azurerm_container_registry.coffeshop.login_server
+  os_type             = "Linux"
+
+
+  image_registry_credential {
+    user_assigned_identity_id = azurerm_user_assigned_identity.example.id
+    server                    = azurerm_container_registry.coffeshop.login_server
   }
 
   identity {
-    type = "UserAssigned"
-    identity_ids = [ azurerm_user_assigned_identity.example.id ]
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.example.id]
   }
   container {
 
     image  = "${azurerm_container_registry.coffeshop.login_server}/coffee-app:latest"
     cpu    = "1.0"
     memory = "1.5"
-    name = "coffe-app"
-     
-    
+    name   = "coffe-app"
+
+
     ports {
       port     = 80
       protocol = "TCP"
@@ -83,23 +85,23 @@ resource "azurerm_container_group" "example-new-york" {
   resource_group_name = azurerm_resource_group.contosocoffee.name
   ip_address_type     = "Public"
   dns_name_label      = "example-dns-new-york"
-  os_type = "Linux"
+  os_type             = "Linux"
 
   image_registry_credential {
-   user_assigned_identity_id = azurerm_user_assigned_identity.example.id
-   server = azurerm_container_registry.coffeshop.login_server
+    user_assigned_identity_id = azurerm_user_assigned_identity.example.id
+    server                    = azurerm_container_registry.coffeshop.login_server
   }
 
   identity {
-    type = "UserAssigned"
-    identity_ids = [ azurerm_user_assigned_identity.example.id ]
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.example.id]
   }
   container {
-   
+
     image  = "${azurerm_container_registry.coffeshop.login_server}/coffee-app:latest"
     cpu    = "1.0"
     memory = "1.5"
-    name = "coffe-app"
+    name   = "coffe-app"
     ports {
       port     = 80
       protocol = "TCP"
