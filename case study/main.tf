@@ -37,3 +37,12 @@ resource "azurerm_storage_account" "example" {
 
 }
 
+resource "azurerm_container_registry" "coffeshop" {
+  name                = "coffeshop"
+  location            = "eastus"
+  resource_group_name = "contosocoffee"
+  sku                 = "Standard"
+  admin_enabled       = true
+}
+
+
