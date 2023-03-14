@@ -109,7 +109,7 @@ resource "azurerm_container_group" "example-new-york" {
   }
 }
 
-
+# Traffic manager profile
 resource "azurerm_traffic_manager_profile" "example" {
   name                   = "contosocoffee"
   resource_group_name    = azurerm_resource_group.contosocoffee.name
@@ -133,7 +133,7 @@ resource "azurerm_traffic_manager_profile" "example" {
     environment = "Production"
   }
 }
-
+# creating endpoint located in UK London
 resource "azurerm_traffic_manager_external_endpoint" "endpoint1" {
   name       = "london"
   profile_id = azurerm_traffic_manager_profile.example.id
@@ -142,6 +142,7 @@ resource "azurerm_traffic_manager_external_endpoint" "endpoint1" {
   
 
 }
+# creating endpoint located in US New york
 resource "azurerm_traffic_manager_external_endpoint" "endpoint2" {
   name       = "new-york"
   profile_id = azurerm_traffic_manager_profile.example.id
