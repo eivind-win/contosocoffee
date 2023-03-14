@@ -47,7 +47,7 @@ Mark will require read-only access to the Contoso Coffee resources. He will ther
 
   
 
-<img title="" src="contosocoffee/tree/main/case%20study/assets/c89edcde4a2933f30543e3de119b3798a3e62829.png" alt="Contoso coffee_users (1).png" data-align="inline">
+<img title="" src="contosocoffee/tree/main/case-study/assets/c89edcde4a2933f30543e3de119b3798a3e62829.png" alt="Contoso coffee_users (1).png" data-align="inline">
 
 ## Load Balancing and Geo-redundent access
 
