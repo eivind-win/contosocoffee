@@ -109,3 +109,43 @@ resource "azurerm_container_group" "example-new-york" {
   }
 }
 
+
+resource "azurerm_traffic_manager_profile" "example" {
+  name                   = "contosocoffee"
+  resource_group_name    = azurerm_resource_group.contosocoffee.name
+  traffic_routing_method = "Performance"
+
+  dns_config {
+    relative_name = "coffeeshop"
+    ttl           = 100
+  }
+
+  monitor_config {
+    protocol                     = "HTTP"
+    port                         = 80
+    path                         = "/"
+    interval_in_seconds          = 30
+    timeout_in_seconds           = 9
+    tolerated_number_of_failures = 3
+  }
+
+  tags = {
+    environment = "Production"
+  }
+}
+
+resource "azurerm_traffic_manager_external_endpoint" "endpoint1" {
+  name       = "london"
+  profile_id = azurerm_traffic_manager_profile.example.id
+  target =  azurerm_container_group.example-london.fqdn
+  endpoint_location = azurerm_container_group.example-london.location
+  
+
+}
+resource "azurerm_traffic_manager_external_endpoint" "endpoint2" {
+  name       = "new-york"
+  profile_id = azurerm_traffic_manager_profile.example.id
+  target = azurerm_container_group.example-new-york.fqdn
+  endpoint_location = azurerm_container_group.example-new-york.location
+ 
+}
