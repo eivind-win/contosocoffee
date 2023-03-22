@@ -1,2 +1,3 @@
 
-<img =src"case study/assets/2585d238afb02d3fb31dfe83d72baaeb4d14148c.png/>
+![image](https://user-images.githubusercontent.com/70135704/226915901-dc8aeda7-5054-4563-aaee-bf9cbce57e78.png)
+
