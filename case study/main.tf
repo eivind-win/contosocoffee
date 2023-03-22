@@ -135,18 +135,18 @@ resource "azurerm_traffic_manager_profile" "example" {
 }
 # creating endpoint located in UK London
 resource "azurerm_traffic_manager_external_endpoint" "endpoint1" {
-  name       = "london"
-  profile_id = azurerm_traffic_manager_profile.example.id
-  target =  azurerm_container_group.example-london.fqdn
+  name              = "london"
+  profile_id        = azurerm_traffic_manager_profile.example.id
+  target            = azurerm_container_group.example-london.fqdn
   endpoint_location = azurerm_container_group.example-london.location
-  
+
 
 }
 # creating endpoint located in US New york
 resource "azurerm_traffic_manager_external_endpoint" "endpoint2" {
-  name       = "new-york"
-  profile_id = azurerm_traffic_manager_profile.example.id
-  target = azurerm_container_group.example-new-york.fqdn
+  name              = "new-york"
+  profile_id        = azurerm_traffic_manager_profile.example.id
+  target            = azurerm_container_group.example-new-york.fqdn
   endpoint_location = azurerm_container_group.example-new-york.location
- 
+
 }
