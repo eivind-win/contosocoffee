@@ -150,3 +150,24 @@ resource "azurerm_traffic_manager_external_endpoint" "endpoint2" {
   endpoint_location = azurerm_container_group.example-new-york.location
 
 }
+
+resource "azurerm_storage_management_policy" "policy1" {
+  storage_account_id = azurerm_storage_account.example.id
+
+  rule {
+    name    = "rule1"
+    enabled = true
+    filters {
+      prefix_match = ["pictures/"]
+      blob_types   = ["blockBlob"]
+    }
+    actions {
+      base_blob {
+        tier_to_cool_after_days_since_modification_greater_than    = 1
+        tier_to_archive_after_days_since_modification_greater_than = 2
+        delete_after_days_since_modification_greater_than          = 3
+      }
+    
+    }
+  }
+}
