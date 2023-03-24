@@ -48,6 +48,7 @@ Contoso Coffee will operate in London and New York, because of this a solution w
 
 ![image](https://user-images.githubusercontent.com/70135704/226916682-7163bcc5-bb8e-4005-be14-b553f04c0b9b.png)
 
+
 ## Storage
 
 - Storage account V2.
