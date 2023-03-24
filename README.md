@@ -20,8 +20,7 @@ Create two Azure container instances (ACI) that runs the website in both London 
 
 Then loadbalance those two with geo-redundancy. We chose Traffic Manager.
 
-Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. Here we created a SAS key that can last for x amount of time.
-
+Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. 
 Create a static web app that displays pictures from the blob container.
 
 ## User accounts
