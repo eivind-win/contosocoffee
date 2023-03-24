@@ -1,13 +1,13 @@
-CoffeeForEveryone
-The coffeeShop case study
+# CoffeeForEveryone
+## The coffeeShop case study
 In this project we created two websites both located in New York and London. One called contosocoffeelondon and the other contosocoffeenewyork.
 
 I choose to Host the Docker Container solution via Azure Container Registries and pull into an Azure ACI solution.
 
-Company Overview
+## Company Overview
 Contoso Coffee is a small coffee house that is opening soon in London and New York, they are looking for a cloud hosted solution for their website and data storage, costs must be kept to a minimum.
 
-Our solution to meet the requirements
+## Our solution to meet the requirements
 Here is the steps to create the project.
 
 Build a docker image
@@ -24,7 +24,7 @@ Create a storage account with blob storage and create a lifecycle management rul
 
 Create a static web app that displays pictures from the blob container.
 
-User accounts
+## User accounts
 Contoso coffee requires 3 Administrators for the day to day control of the solution.
 
 Bob
