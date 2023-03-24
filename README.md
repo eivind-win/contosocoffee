@@ -2,7 +2,7 @@ CoffeeForEveryone
 The coffeeShop case study
 In this project we created two websites both located in New York and London. One called contosocoffeelondon and the other contosocoffeenewyork.
 
-I chose to Host the Docker Container solution via Azure Container Registries and pull into an Azure ACI solution.
+I choose to Host the Docker Container solution via Azure Container Registries and pull into an Azure ACI solution.
 
 Company Overview
 Contoso Coffee is a small coffee house that is opening soon in London and New York, they are looking for a cloud hosted solution for their website and data storage, costs must be kept to a minimum.
