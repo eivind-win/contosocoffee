@@ -1,6 +1,6 @@
 # CoffeeForEveryone
 ## The coffeeShop case study
-In this project we created two websites both located in New York and London. One called contosocoffeelondon and the other contosocoffeenewyork.
+In this project i created two websites both located in New York and London. One called contosocoffeelondon and the other contosocoffeenewyork.
 
 I choose to Host the Docker Container solution via Azure Container Registries and pull into an Azure ACI solution.
 
