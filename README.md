@@ -47,3 +47,11 @@ Load Balancing and Geo-redundent access
 Contoso Coffee will operate in London and New York, because of this a solution will need to be configured that allows the US users to access a more local server than London and vice versa. Load balancing can be achieved through DNS redirection or a geo-load balanced solution.
 
 ![image](https://user-images.githubusercontent.com/70135704/226916682-7163bcc5-bb8e-4005-be14-b553f04c0b9b.png)
+
+## Storage
+
+- Storage account V2.
+- Blob container. 
+
+Contoso coffee is planning to store a large amount of image information that will be shared with staff members and clients. These images will be scans of 35 and 120 film for hipster photography that will be displayed around the coffee shop. The storage solution should minimize costs by automatically archiving data onto slower storage when required.
+
