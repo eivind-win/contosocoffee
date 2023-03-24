@@ -151,6 +151,7 @@ resource "azurerm_traffic_manager_external_endpoint" "endpoint2" {
 
 }
 
+#lifesycle managment for images
 resource "azurerm_storage_management_policy" "policy1" {
   storage_account_id = azurerm_storage_account.example.id
 
