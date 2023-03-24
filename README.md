@@ -56,3 +56,4 @@ Contoso Coffee will operate in London and New York, because of this a solution w
 
 Contoso coffee is planning to store a large amount of image information that will be shared with staff members and clients. These images will be scans of 35 and 120 film for hipster photography that will be displayed around the coffee shop. The storage solution should minimize costs by automatically archiving data onto slower storage when required.
 
+![image](https://user-images.githubusercontent.com/70135704/227466452-3b71ba7c-922d-41b3-88b7-acf99fe13d71.png)
