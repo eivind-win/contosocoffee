@@ -166,7 +166,7 @@ resource "azurerm_storage_management_policy" "policy1" {
       base_blob {
         tier_to_cool_after_days_since_modification_greater_than    = 1
         tier_to_archive_after_days_since_modification_greater_than = 2
-        delete_after_days_since_modification_greater_than          = 3
+        delete_after_days_since_modification_greater_than          = 30
       }
     
     }
