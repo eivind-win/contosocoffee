@@ -1,13 +1,13 @@
-CoffeeForEveryone
-The coffeeShop case study
-In this project we created two websites both located in New York and London. One called contosocoffeelondon and the other contosocoffeenewyork.
+# CoffeeForEveryone
+## The coffeeShop case study
+In this project i created two websites both located in New York and London. One called contosocoffeelondon and the other contosocoffeenewyork.
 
-We chose the Difficulty Level 3: Host the Docker Container solution via Azure Container Registries and pull into an Azure ACI solution.
+I choose to Host the Docker Container solution via Azure Container Registries and pull into an Azure ACI solution.
 
-Company Overview
+## Company Overview
 Contoso Coffee is a small coffee house that is opening soon in London and New York, they are looking for a cloud hosted solution for their website and data storage, costs must be kept to a minimum.
 
-Our solution to meet the requirements
+## Our solution to meet the requirements
 Here is the steps to create the project.
 
 Build a docker image
@@ -20,11 +20,10 @@ Create two Azure container instances (ACI) that runs the website in both London 
 
 Then loadbalance those two with geo-redundancy. We chose Traffic Manager.
 
-Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. Here we created a SAS key that can last for x amount of time.
-
+Create a storage account with blob storage and create a lifecycle management rule that says move to Archive tier after 30 days. 
 Create a static web app that displays pictures from the blob container.
 
-User accounts
+## User accounts
 Contoso coffee requires 3 Administrators for the day to day control of the solution.
 
 Bob
@@ -47,3 +46,13 @@ Load Balancing and Geo-redundent access
 Contoso Coffee will operate in London and New York, because of this a solution will need to be configured that allows the US users to access a more local server than London and vice versa. Load balancing can be achieved through DNS redirection or a geo-load balanced solution.
 
 ![image](https://user-images.githubusercontent.com/70135704/226916682-7163bcc5-bb8e-4005-be14-b553f04c0b9b.png)
+
+
+## Storage
+
+- Storage account V2.
+- Blob container. 
+
+Contoso coffee is planning to store a large amount of image information that will be shared with staff members and clients. These images will be scans of 35 and 120 film for hipster photography that will be displayed around the coffee shop. The storage solution should minimize costs by automatically archiving data onto slower storage when required.
+
+![image](https://user-images.githubusercontent.com/70135704/227466452-3b71ba7c-922d-41b3-88b7-acf99fe13d71.png)
